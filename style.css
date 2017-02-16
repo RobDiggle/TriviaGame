@@ -1,0 +1,24 @@
+body
+{
+	padding:15px;
+	margin:0px 160px 0px 160px;
+}
+
+#head
+{
+	text-align: center;
+
+}
+
+#imgCent
+{
+
+    text-align: center;
+}
+
+#questions
+{
+	border:groove black 2px;
+	padding: 15px;
+}
+
