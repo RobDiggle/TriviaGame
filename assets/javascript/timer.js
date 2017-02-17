@@ -1,8 +1,4 @@
 
-  	$( document ).ready(function() {
-    console.log( "ready!" );
-
-
   	setTimeout(fiveSeconds, 5000);
     setTimeout(tenSeconds, 10000);
     setTimeout(fifteenSeconds, 15000);
@@ -77,46 +73,13 @@
 
     function oneHundredTwentySeconds() {$("#imgCent").html('<img src="assets/images/box13.jpg" height="350" width="400"/>');}
 
-
-
-    var points = [];
-	var negPoints = [];
-
-	  function caller(){
-		
-		if(document.getElementById('askingRight').checked) 
-		{
-					
-					points.push("+1 point");
-		}
-		else if(document.getElementById('asking').checked)
-		{
-					negPoints.push("-1 point");
-		}
-
-				
-						}
-
-	console.log(points);
-	console.log(negPoints);
-
-	document.getElementById('total').innerHTML = points.length;
-
-
-
-
-
-
-
-
+    var trueCount = 0;
+    var falseCount = 0;
 
     function timeUp()
     {
       var shift = document.getElementById('questions');
-      questions.innerHTML = "You got this many questions right: " + points.length + "    You got this many questions wrong:" + negPoints.length;
+      questions.innerHTML = "You got this many questions right: " + trueCount + "    You got this many questions wrong:" + falseCount;
     }
 
     setTimeout(timeUp, 120000);
-
-
-    });
