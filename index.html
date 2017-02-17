@@ -6,7 +6,7 @@
 
   <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-    <script type='text/javascript' src='assets/javascript/timer.js'></script>
+    <script type='text/javascript' src='assets/javascript/app.js'></script>
 
  
 
@@ -98,13 +98,11 @@
 	</li>
 
 			<form>
-  				<input type="radio" name="state" value="false" > New York<br>
-  				<input type="radio" name="state" value="false"> Florida<br>
- 				<input type="radio" name="state" value="false"> Oregon<br>
+  				<input type="radio" name="state" value="false" id="asking"> New York<br>
+  				<input type="radio" name="state" value="false" id="asking"> Florida<br>
+ 				<input type="radio" name="state" value="false" id="asking"> Oregon<br>
  				<input type="radio" name="state" value="true" id="askingRight"> Conneticut<br>
 			</form>
-
-
 
 
 
@@ -113,10 +111,10 @@
 	</li>
 
 			<form>
-  				<input type="radio" name="written" value="false" > Tractatus Logico-Philosophicus<br>
-  				<input type="radio" name="written" value="false"> Principles of Gestalt<br>
+  				<input type="radio" name="written" value="false" id="asking"> Tractatus Logico-Philosophicus<br>
+  				<input type="radio" name="written" value="false" id="asking"> Principles of Gestalt<br>
  				<input type="radio" name="written" value="true" id="askingRight"> Interaction of color<br>
- 				<input type="radio" name="written" value="false"> 25k years of Erotic freedom<br>
+ 				<input type="radio" name="written" value="false" id="asking"> 25k years of Erotic freedom<br>
 			</form>
 
 
@@ -126,10 +124,10 @@
 	</li>
 
 			<form>
-  				<input type="radio" name="visual" value="false" > Lovers 2<br>
+  				<input type="radio" name="visual" value="false" id="asking"> Lovers 2<br>
   				<input type="radio" name="visual" value="true" id="askingRight"> Homage to the Square<br>
- 				<input type="radio" name="visual" value="false"> Culture and Value<br>
- 				<input type="radio" name="visual" value="false"> Nostalghia<br>
+ 				<input type="radio" name="visual" value="false" id="asking"> Culture and Value<br>
+ 				<input type="radio" name="visual" value="false" id="asking"> Nostalghia<br>
 			</form>
 
 
@@ -141,9 +139,9 @@
 
 			<form>
   				<input type="radio" name="fals" value="true" id="askingRight"> He emphasized minimalism and efficiency.<br>
-  				<input type="radio" name="fals" value="false"> He thought it worthwhile to theorize before doing.<br>
- 				<input type="radio" name="fals" value="false"> He thought it counter productive to theorize before doing.<br>
- 				<input type="radio" name="fals" value="false"> He thought one must know craft before one can make art.<br>
+  				<input type="radio" name="fals" value="false" id="asking"> He thought it worthwhile to theorize before doing.<br>
+ 				<input type="radio" name="fals" value="false" id="asking"> He thought it counter productive to theorize before doing.<br>
+ 				<input type="radio" name="fals" value="false" id="asking"> He thought one must know craft before one can make art.<br>
 			</form>
 
 
@@ -155,16 +153,16 @@
 	</li>
 
 			<form>
-  				<input type="radio" name="gender" value="false" > He thought drawing inferior to painting.<br>
+  				<input type="radio" name="gender" value="false"  id="asking"> He thought drawing inferior to painting.<br>
   				<input type="radio" name="gender" value="true" id="askingRight"> He viewed art as way to come to know God.<br>
- 				<input type="radio" name="gender" value="false"> He thought art was inherently secular in nature.<br>
- 				<input type="radio" name="gender" value="false"> He viewed art as antithetical to faith.<br>
+ 				<input type="radio" name="gender" value="false" id="asking"> He thought art was inherently secular in nature.<br>
+ 				<input type="radio" name="gender" value="false" id="asking"> He viewed art as antithetical to faith.<br>
 			</form>
 
   <p>
 
  <div id="buttonEnd">
-    <button onclick='caller()'> Submit your answers</button>
+    <button onclick='caller()'> Submit your answers to these questions.</button>
   </div>
 
 

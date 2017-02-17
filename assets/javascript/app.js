@@ -2,7 +2,7 @@
   	$( document ).ready(function() {
     console.log( "ready!" );
 
-
+    //I know this is an elegant solution for the problem of creating a looping image but I was unable to replicate the in class solution we discussed on the whiteboard.
   	setTimeout(fiveSeconds, 5000);
     setTimeout(tenSeconds, 10000);
     setTimeout(fifteenSeconds, 15000);
@@ -79,44 +79,42 @@
 
 
 
-    var points = [];
-	var negPoints = [];
-
-	  function caller(){
-		
-		if(document.getElementById('askingRight').checked) 
-		{
-					
-					points.push("+1 point");
-		}
-		else if(document.getElementById('asking').checked)
-		{
-					negPoints.push("-1 point");
-		}
-
-				
-						}
-
-	console.log(points);
-	console.log(negPoints);
-
-	document.getElementById('total').innerHTML = points.length;
-
-
-
-
-
-
-
-
-
     function timeUp()
     {
       var shift = document.getElementById('questions');
-      questions.innerHTML = "You got this many questions right: " + points.length + "    You got this many questions wrong:" + negPoints.length;
+      questions.innerHTML = "You got this many questions right: " + total + "    You got this many questions wrong:" + totalNeg;
     }
 
     setTimeout(timeUp, 120000);
+
+        var points = [];
+    var negPoints = [];
+
+      function caller(){
+        
+        if(document.getElementById('askingRight').checked) 
+        {
+                    
+                    points.push("+1 point");
+        }
+        else if(document.getElementById('asking').checked)
+        {
+                    negPoints.push("-1 point");
+        }
+
+              document.getElementById('total').innerHTML = points.length;
+              document.getElementById('totalNeg').innerHTML = negPoints.length;
+                        }
+
+    console.log(points);
+    console.log(negPoints);
+
+
+
+                        
+
+
+
 
 
     });
