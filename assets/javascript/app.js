@@ -75,7 +75,7 @@
 
     function oneHundredFifteenSeconds() {$("#imgCent").html('<img src="assets/images/box12.jpg" height="350" width="400"/>');}
 
-    function oneHundredTwentySeconds() {$("#imgCent").html('<img src="assets/images/box13.jpg" height="350" width="400"/>');}
+    function oneHundredTwentySeconds() {$("#imgCent").html('<img src="assets/images/box13.jpg" height="350" width="400"/>');};
 
 
 
@@ -85,7 +85,7 @@
     function timeUp()
     {
       var shift = document.getElementById('questions');
-      questions.innerHTML = "You got this many questions right: " + "totalPos" + "    You got this many questions wrong:" + "totalNeg";
+      questions.innerHTML = "You got this many questions right: " + totalPos + "    You got this many questions wrong:" + totalNeg;
     }
 
     setTimeout(timeUp, 120000);
@@ -98,12 +98,12 @@
       function buttonPush()
       {
         
-        if(document.getElementById('askingRight').checked) 
+        if(document.getElementById('askingRight').checked === true) 
         {
                     
                     points.push("+1 point");
         }
-        else if(document.getElementById('asking').checked)
+        else if(document.getElementById('asking').checked === true)
         {
                     negPoints.push("-1 point");
         }
@@ -113,7 +113,8 @@
 
               document.getElementById('totalPos').innerHTML = points.length;
               document.getElementById('totalNeg').innerHTML = negPoints.length;
-                        }
+
+                        };
 
     
 
