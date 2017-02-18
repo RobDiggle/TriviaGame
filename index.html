@@ -27,7 +27,7 @@
   
 
 	<!--Timer-->
-  <div id="timerNow">
+  <div id="timer">
     <h1></h1>
   </div>
 
@@ -74,9 +74,9 @@
 
 			<form>
   				<input type="radio" name="college" value="true" id="askingRight"> Yale<br>
-  				<input type="radio" name="college" value="false"> Rutgers<br>
- 				<input type="radio" name="college" value="false"> UCLA<br>
- 				<input type="radio" name="college" value="false"> CUNY<br>
+  				<input type="radio" name="college" value="false" id="asking"> Rutgers<br>
+ 				<input type="radio" name="college" value="false" id="asking"> UCLA<br>
+ 				<input type="radio" name="college" value="false" id="asking"> CUNY<br>
 			</form>
 
 
@@ -85,10 +85,10 @@
 	</li>
 
 			<form>
-  				<input type="radio" name="eth" value="false" > pain, love<br>
+  				<input type="radio" name="eth" value="false" id="asking"> pain, love<br>
   				<input type="radio" name="eth" value="true" id="askingRight"> ethics, aesthetics<br>
- 				<input type="radio" name="eth" value="false"> qualia, sense<br>
- 				<input type="radio" name="eth" value="false"> dogs, dog treats<br>
+ 				<input type="radio" name="eth" value="false" id="asking"> qualia, sense<br>
+ 				<input type="radio" name="eth" value="false" id="asking"> dogs, dog treats<br>
 			</form>
 
 
@@ -161,10 +161,17 @@
 
   <p>
 
- <div id="buttonEnd">
-    <button onclick='caller()'> Submit your answers to these questions.</button>
-  </div>
 
+
+
+    <button onclick="buttonPush()"> Submit your answers to these questions.</button>
+
+	<div id="totalPos">
+		<h1></h1>
+	</div>
+	<div id="totalNeg">
+		<h1></h1>
+	</div>
 
    </ul>
 

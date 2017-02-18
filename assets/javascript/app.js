@@ -85,7 +85,7 @@
     function timeUp()
     {
       var shift = document.getElementById('questions');
-      questions.innerHTML = "You got this many questions right: " + totalPos + "    You got this many questions wrong:" + totalNeg;
+      questions.innerHTML = "You got this many questions right: " + "totalPos" + "    You got this many questions wrong:" + "totalNeg";
     }
 
     setTimeout(timeUp, 120000);
@@ -95,7 +95,8 @@
     var points = [];
     var negPoints = [];
 
-      function caller(){
+      function buttonPush()
+      {
         
         if(document.getElementById('askingRight').checked) 
         {
@@ -107,15 +108,31 @@
                     negPoints.push("-1 point");
         }
 
+            console.log(points);
+            console.log(negPoints);
+
               document.getElementById('totalPos').innerHTML = points.length;
               document.getElementById('totalNeg').innerHTML = negPoints.length;
                         }
 
-    console.log(points);
-    console.log(negPoints);
+    
 
 
+                        function countDown()
+                        {
+                            var now = new Date();
+                            var eventDate = Date(2017, 17, 2)
 
+                            var currentTime = now.getTime();
+                            var eventTime = eventDate.getTime();
+
+                            var remTime = eventTime - currentTime;
+                            var s = Math.floor(remTime/1000);
+
+                            s%=120;
+
+                            document.getElementById('timer').textContent = s;
+                        }
                         
 
 
