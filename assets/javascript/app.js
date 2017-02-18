@@ -79,15 +79,20 @@
 
 
 
+    var totalPos = [];
+    var totalNeg = [];
+
     function timeUp()
     {
       var shift = document.getElementById('questions');
-      questions.innerHTML = "You got this many questions right: " + total + "    You got this many questions wrong:" + totalNeg;
+      questions.innerHTML = "You got this many questions right: " + totalPos + "    You got this many questions wrong:" + totalNeg;
     }
 
     setTimeout(timeUp, 120000);
 
-        var points = [];
+
+
+    var points = [];
     var negPoints = [];
 
       function caller(){
@@ -102,7 +107,7 @@
                     negPoints.push("-1 point");
         }
 
-              document.getElementById('total').innerHTML = points.length;
+              document.getElementById('totalPos').innerHTML = points.length;
               document.getElementById('totalNeg').innerHTML = negPoints.length;
                         }
 
@@ -118,3 +123,22 @@
 
 
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
